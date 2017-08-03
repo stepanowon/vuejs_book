@@ -1,4 +1,4 @@
-°¢ Àıº° ¿¹Á¦
+ê° ì ˆë³„ ì˜ˆì œ
 -14.1 : test01
 -14.1.1~3 : todolistapp_test1
 -14.2 : todolistapp_test2

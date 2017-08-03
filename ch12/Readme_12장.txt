@@ -1,4 +1,4 @@
-°¢ Àıº° ¿¹Á¦
+ê° ì ˆë³„ ì˜ˆì œ
 -12.2 : routertest01
 -12.3 : routertest02
 -12.4 : routertest03
