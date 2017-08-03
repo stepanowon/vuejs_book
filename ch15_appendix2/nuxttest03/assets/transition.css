@@ -1,0 +1,18 @@
+.page-enter-active, .page-leave-active {
+  transition: opacity .5s;
+}
+.page-enter, .page-leave-to {
+  opacity: 0;
+}
+
+.elastic-enter-active {
+    animation: elastic-in 0.5s;
+}
+.elastic-leave-active {
+    animation: elastic-in 0.5s reverse;
+}
+@keyframes elastic-in {
+    0% { transform: scale(0); opacity:0;}
+    70% { transform: scale(1.2); opacity:0.5; }
+    100% { transform: scale(1); opacity:1; }
+}

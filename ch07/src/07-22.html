@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>07-22</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.3.3/vue.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/6.23.0/polyfill.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.3/fetch.min.js"></script>
+</head>
+<body>
+<script>
+    let url = "http://sample.bmaster.kro.kr/contacts_long/search/ja";
+    fetch(url)
+        .then((response)=>response.json())
+        .then((json)=> console.log(json))
+        .catch((e)=> console.log(e.message));
+</script>
+</body>
+</html>

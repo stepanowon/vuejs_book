@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>06-26</title>
+    <!-- 공용 스타일 시작-->
+    <style>
+    * {  box-sizing: border-box;  }
+    .header {
+        background-color: purple; padding: 30px 30px;
+        color: yellow; text-align: center;
+    }
+    .header:after {
+        content: ""; display: table; clear: both;
+    }
+    </style>
+    <!-- 공용 스타일 끝-->
+    <script src="https://unpkg.com/vue/dist/vue.min.js"></script>  
+</head>
+<!--이벤트 버스 객체 시작-->
+<script type="text/javascript">
+    var eventBus = new Vue();
+</script>
+<!--이벤트 버스 객체 끝-->
+<!-- list-component 시작-->
+<style>
+ul {  margin: 0; padding: 0; }
+ul li { 
+    cursor: pointer; position: relative; padding: 8px 8px 8px 40px;
+    background: #eee; font-size: 14px;  transition: 0.2s;
+    -webkit-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;  
+}
+ul li:hover {  background: #ddd;  }
+ul li.checked {
+    background: #BBB;  color: #fff; text-decoration: line-through;
+}
+ul li.checked::before {
+    content: ''; position: absolute; border-color: #fff;
+    border-style: solid; border-width: 0px 1px 1px 0px; 
+    top: 10px; left: 16px;  transform: rotate(45deg);
+    height: 8px; width: 8px;
+}
+.close {
+    position: absolute; right: 0; top: 0;
+    padding: 12px 16px 12px 16px
+}
+.close:hover {
+    background-color: #f44336;  color: white;
+}
+</style>
+<template id="list-template">
+    <ul id="todolist">
+        <li v-for="(a, index) in todolist" v-bind:class="checked(a.done)"
+            v-on:click="doneToggle(index)">
+            <span>{{ a.todo }}</span>
+            <span v-if="a.done"> (완료)</span>
+            <span class="close" v-on:click.stop="deleteTodo(index)">&#x00D7;</span>
+        </li>
+    </ul>
+</template>
+<script type="text/javascript">
+Vue.component('list-component', {
+    template : '#list-template',
+    created : function() {
+         eventBus.$on('add-todo', this.addTodo);
+    },
+    data : function() {
+        return {
+            todolist : [
+                { todo : "영화보기", done:false },
+                { todo : "주말 산책", done:true },
+                { todo : "ES6 학습", done:false },
+                { todo : "잠실 야구장", done:false },
+            ]
+        }
+    },
+    methods : {
+        checked : function(done) {
+            if(done) return { checked:true };
+            else return { checked:false };
+        },
+        addTodo : function(todo) {
+            if (todo !== "") {
+                this.todolist.push({ todo : todo, done:false });
+            }
+        },
+        doneToggle : function(index) {
+            this.todolist[index].done = !this.todolist[index].done;
+        },
+        deleteTodo : function(index) {
+            this.todolist.splice(index,1);
+        }
+    }
+})
+</script>
+<!-- list-component 끝-->
+
+<body>
+    <div id="todolistapp">
+        <div id="header" class="header">
+            <h2>Todo List App</h2>
+
+        </div>
+
+    </div>
+</body>
+<script type="text/javascript">
+Vue.config.devtools = true;
+var vm = new Vue({
+    el : "#todolistapp"
+})
+</script>
+</html>

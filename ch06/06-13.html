@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>06-13</title>
+  <script src="https://unpkg.com/vue/dist/vue.min.js"></script>
+</head>
+<template id="listTemplate">
+    <li>{{myMessage}}</li>
+</template>
+<script type="text/javascript">
+Vue.component('list-component', {
+    template : '#listTemplate',
+    props : [ 'myMessage' ]
+})
+</script>
+<body>
+<div id="app">
+    <ul>
+        <list-component my-message="Hello"></list-component>
+        <list-component my-message="씬짜오"></list-component>
+        <list-component my-message="니하오마"></list-component>
+    </ul>
+</div>
+</body>
+<script type="text/javascript">
+Vue.config.devtools = true;
+var vm = new Vue({
+    el : "#app"
+})
+</script>
+</html>

@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`List.vue 스냅샷 테스트 1`] = `
+<ul>
+  <li
+    class=""
+  >
+    <span>
+      영화보기
+    </span>
+    <!--  -->
+    <span
+      class="close"
+    >
+      ×
+    </span>
+  </li>
+  <li
+    class="checked"
+  >
+    <span>
+      주말 산책
+    </span>
+    <span>
+      (완료)
+    </span>
+    <span
+      class="close"
+    >
+      ×
+    </span>
+  </li>
+  <li
+    class=""
+  >
+    <span>
+      ES6 학습
+    </span>
+    <!--  -->
+    <span
+      class="close"
+    >
+      ×
+    </span>
+  </li>
+  <li
+    class=""
+  >
+    <span>
+      잠실 야구장
+    </span>
+    <!--  -->
+    <span
+      class="close"
+    >
+      ×
+    </span>
+  </li>
+  <li
+    class=""
+  >
+    <span>
+      수영하기
+    </span>
+    <!--  -->
+    <span
+      class="close"
+    >
+      ×
+    </span>
+  </li>
+</ul>
+`;

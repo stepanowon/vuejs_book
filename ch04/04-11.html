@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>04-11</title>
+  <style>
+   html, body { margin: 0;padding: 0; }
+   #example {
+    height: 98vh; min-height: 100%; padding:10px
+   }
+  </style>
+  <script src="https://unpkg.com/vue/dist/vue.min.js"></script>
+</head>
+<body>
+<div id="example" v-on:contextmenu.prevent="ctxStop"
+    @mouseup.left="leftMouse" @mouseup.right="rightMouse">
+    <div>
+      Left Click : 왼쪽으로<br /> 
+      Right Click : 오른쪽으로
+    </div>
+    <img src="images/foot.jpg" v-bind:style="{ position:'absolute', left: pos.left + 'px', top:pos.top +'px' }" />
+</div>
+<script type="text/javascript">
+var vm = new Vue({
+    el : "#example",
+    data : {
+      pos : { left : 100, top:100 }
+    },
+    methods: {
+        ctxStop : function(e) { },
+        leftMouse : function(e) {
+          if (this.pos.left > 30)
+            this.pos.left -= 30;
+            console.log("Move Left!!");
+        },
+        rightMouse : function(e) {
+          this.pos.left += 30;
+          console.log("Move Right!!");
+        }
+    }
+})
+</script>
+</body>
+</html>

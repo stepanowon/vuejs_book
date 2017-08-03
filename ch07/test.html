@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title></title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+<script>
+$(function() {
+    $.get({
+        url : 'http://localhost/contacts',
+        data : { pageno:2, pagesize:3 },
+        headers : { Authorization:"Basic fkhfkshkkshgsgsege" },
+        success : function(data) {
+            console.log(data);
+        }
+    })    
+})
+</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>13-03</title>
+  <script src="https://unpkg.com/vue/dist/vue.min.js"></script>
+  <style>
+    .box { margin:10px; }
+    .fade-enter-active, .fade-leave-active {
+      transition: opacity .5s
+    }
+    .fade-enter, .fade-leave-to  {
+      opacity: 0
+    }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <div class="box">
+      <button v-on:click="changeVisible">보여주기 토글</button>
+    </div>
+    <div class="box">
+      <transition name="fade"
+        >
+        <img src="hill.jpg" v-if="visible" />
+      </transition>
+    </div>
+  </div>
+</body>
+<script type="text/javascript">
+Vue.config.devtools = true;
+var v = new Vue({
+  el : '#app',
+  data : function() {
+    return {
+      visible:true
+    }
+  },
+  methods : {
+    changeVisible : function() {
+      this.visible = !this.visible;
+    }
+  }
+})
+</script>
+</html>

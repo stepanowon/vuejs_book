@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>13-06</title>
+  <script src="https://unpkg.com/vue/dist/vue.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.min.js"></script>
+  <style>
+    .box { margin:10px; }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <div class="box">
+      <button v-on:click="changeVisible">
+        보여주기 토글
+      </button>
+    </div>
+    <div class="box">
+      <transition appear
+        v-on:before-enter="beforeEnter"
+        v-on:enter="enter"
+        v-on:leave="leave">
+        <img src="hill.jpg" v-if="visible" />
+      </transition>
+    </div>
+  </div>
+</body>
+<script type="text/javascript">
+Vue.config.devtools = true;
+var v = new Vue({
+  el : '#app',
+  data : function() {
+    return {
+      visible:true
+    }
+  },
+  methods : {
+    changeVisible : function() {
+      this.visible = !this.visible;
+    },
+    beforeEnter: function (el) {
+      el.style.opacity = 0
+    },
+    enter: function (el, done) {
+      Velocity(el, { opacity: 0, scale:0.2 }, { duration: 200 })
+      Velocity(el, { opacity: 0.7, scale:1.2 }, { duration: 200 })
+      Velocity(el, { opacity: 1, scale:1 }, { complete: done })
+    },
+    leave: function (el, done) {
+      Velocity(el, { translateX: '0px', opacity: 1 }, { duration: 100 })
+      Velocity(el, { translateX: '20px', opacity: 1 }, { duration: 100, loop:2 })
+      Velocity(el, { translateX: '0px', opacity: 1 }, { duration: 200 })
+      Velocity(el, { translateX: '100px', opacity: 0 }, { complete:done })
+    }
+  }
+})
+</script>
+</html>

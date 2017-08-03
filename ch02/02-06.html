@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>02-06</title>
+  <script src="https://unpkg.com/vue/dist/vue.min.js"></script>
+</head>
+<body>
+  <div id="account">
+    예금액 : <input type="text" v-model="amount" />
+    <img v-show="amount < 0" src="http://sample.bmaster.kro.kr/img/error.png" 
+        title="마이너스는 허용하지 않습니다"
+        style="width:15px; height:15px; vertical-align:middle" />
+  </div>
+  <script type="text/javascript">
+  var simple1 = new Vue({
+    el : '#account',
+    data : {
+        amount : 0
+    }
+  })
+  </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>02-03</title>
+  <script src="https://unpkg.com/vue/dist/vue.min.js"></script>
+</head>
+<body>
+   <div id="simple">
+     <input id="a" type="text" v-bind:value="message">
+     <br />
+     <img v-bind:src="imagePath" />
+   </div>
+
+  <script type="text/javascript">
+    var model = {
+      message : 'v-bind 디렉티브',
+      imagePath : "http://sample.bmaster.kro.kr/photos/61.jpg"
+    };
+
+    var simple = new Vue({
+      el : '#simple',
+      data : model
+    })
+  </script>
+</body>
+</html>

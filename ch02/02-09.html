@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>02-09</title>
+<script src="https://unpkg.com/vue/dist/vue.min.js"></script>
+</head>
+<body>
+    <div id="exmaple">
+        <select id="regions">
+            <option disabled="disabled" selected>지역을 선택하세요</option>
+            <option v-for="(val, key, index) in regions" v-bind:value="key">{{ index+1 }} : {{val}}</option>
+        </select>
+    </div>
+    <script type="text/javascript">
+    var regions = {
+        "A" : "Asia",
+        "B" : "America",
+        "C" : "Europe",
+        "D" : "Africa",
+        "E" : "Oceania"
+    };
+
+    var list = new Vue({
+        el : "#exmaple",
+        data : { regions : regions }
+    });
+    </script>
+</body>
+</html>

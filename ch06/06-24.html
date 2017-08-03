@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>06-24</title>
+    <script src="https://unpkg.com/vue/dist/vue.min.js"></script>  
+</head>
+<!-- 이벤트 버스 객체 -->
+<script type="text/javascript">
+var eventBus = new Vue();
+</script>
+<!-- 첫번째 자식 컴포넌트 시작-->
+<template id="chidl1Template">
+    <div>
+        <button v-on:click="clickEvent">child1 button!!</button>
+        <div>{{currentTime}}</div>
+    </div>
+</template>
+<script type="text/javascript">
+Vue.component('child1-component', {
+    template : '#chidl1Template',
+    data : function() {
+        return { currentTime : '' };
+    },
+    methods : {
+        clickEvent : function() {
+            var d = new Date();
+            var t = d.toLocaleTimeString() + " " + d.getMilliseconds() + "ms";
+            eventBus.$emit('click1', t);
+            this.currentTime = t;
+        }
+    }
+});
+</script>
+<!-- 첫번째 자식 컴포넌트 끝-->
+<!-- 두번째 자식 컴포넌트 시작-->
+<template id="chidl2Template">
+    <ul>
+        <li v-for="t in timelist">{{t}}</li>
+    </ul>
+</template>
+<script type="text/javascript">
+Vue.component('child2-component', {
+    template : '#chidl2Template',
+    data : function() {
+        return { 
+            timelist : []
+        };
+    },
+    created : function() {
+        eventBus.$on('click1', this.child1Click);
+    },
+    methods : {
+        child1Click : function(time) {
+            this.timelist.push(time);
+        }
+    }
+});
+</script>
+<!-- 두번째 자식 컴포넌트 끝-->
+<body>
+    <div id="app">
+        <child1-component></child1-component>
+        <hr />
+        <child2-component></child2-component>
+    </div>
+</body>
+<script type="text/javascript">
+Vue.config.devtools = true;
+var vm = new Vue({
+    el : "#app"
+})
+</script>
+</html>

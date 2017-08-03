@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>06-25</title>
+    <!-- 공용 스타일 시작-->
+    <style>
+    * {  box-sizing: border-box;  }
+    .header {
+        background-color: purple; padding: 30px 30px;
+        color: yellow; text-align: center;
+    }
+    .header:after {
+        content: ""; display: table; clear: both;
+    }
+    </style>
+    <!-- 공용 스타일 끝-->
+    <script src="https://unpkg.com/vue/dist/vue.min.js"></script>  
+</head>
+<!--이벤트 버스 객체 시작-->
+<script type="text/javascript">
+    var eventBus = new Vue();
+</script>
+<!--이벤트 버스 객체 끝-->
+
+<body>
+    <div id="todolistapp">
+        <div id="header" class="header">
+            <h2>Todo List App</h2>
+
+        </div>
+
+    </div>
+</body>
+<script type="text/javascript">
+Vue.config.devtools = true;
+var vm = new Vue({
+    el : "#todolistapp"
+})
+</script>
+</html>

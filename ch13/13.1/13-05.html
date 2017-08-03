@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>13-05</title>
+  <script src="https://unpkg.com/vue/dist/vue.min.js"></script>
+  <style>
+    .box { margin:10px; }
+    .elastic-enter-active {
+        animation: elastic-in 5s;
+    }
+    .elastic-leave-active {
+        animation: elastic-in 5s reverse;
+    }
+    @keyframes elastic-in {
+        0% { transform: scale(0); opacity:0;}
+        70% { transform: scale(1.2); opacity:0.5; }
+        100% { transform: scale(1); opacity:1; }
+    }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <div class="box">
+      <button v-on:click="changeVisible" :disabled="!buttonEnabled">
+          보여주기 토글
+      </button>
+    </div>
+    <div class="box">
+      <transition name="elastic"
+        @before-enter="elasticBeforeEnter"
+        @after-enter="elasticAfterEnter"
+        @before-leave="elasticBeforeLeave"
+        @after-leave="elasticAfterLeave">
+        <img src="hill.jpg" v-if="visible" />
+      </transition>
+    </div>
+  </div>
+</body>
+<script type="text/javascript">
+Vue.config.devtools = true;
+var v = new Vue({
+  el : '#app',
+  data : function() {
+    return {
+      visible:true,
+      buttonEnabled:true
+    }
+  },
+  methods : {
+    changeVisible : function() {
+      this.visible = !this.visible;
+    },
+    elasticBeforeEnter : function() {
+        console.log("* BeforeEnter!");
+        this.buttonEnabled = false;
+    },
+    elasticAfterEnter : function() {
+        console.log("* AfterEnter!");
+        this.buttonEnabled = true;
+    },
+    elasticBeforeLeave : function() {
+        console.log("* BeforeLeave!");
+        this.buttonEnabled = false;
+    },
+    elasticAfterLeave : function() {
+        console.log("* AfterLeave!");
+        this.buttonEnabled = true;
+    }
+  }
+})
+</script>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>02-13</title>
+<script src="https://unpkg.com/vue/dist/vue.min.js"></script>
+</head>
+<body>
+<div id="example">
+    <input type="text" v-model="num" /><br />
+    1부터 입력된 수까지의 합 : <span>{{sum}}</span>
+</div>
+<script type="text/javascript">
+//1부터 입력된 수까지의 합구하기
+var vmSum = new Vue({
+    el : "#example",
+    data : { num : 0 },
+    computed : {
+        sum : function() {
+            var n = Number(this.num);
+            if (Number.isNaN(n) || n < 1)  return 0;
+            return ((1+n) * n) / 2;
+        }
+    }
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>05-05</title>
+  <style>
+    .set1 { background-color: aqua; color:purple; }
+    .set2 { text-align:center; width:120px; }
+    .set3 { border:sandybrown dashed 1px; }
+  </style>
+  <script src="https://unpkg.com/vue/dist/vue.min.js"></script>
+</head>
+<body>
+<div id="example">
+    <button id="btn1" v-bind:class="{ set1:s1, set2:s2, set3:s3 }">버튼1</button>
+    <p>
+        <input type="checkbox" v-model="s1" value="true" />set1 디자인<br/>
+        <input type="checkbox" v-model="s2" value="true" />set2 디자인<br/>
+        <input type="checkbox" v-model="s3" value="true" />set3 디자인<br/>
+    </P>
+</div>
+<script type="text/javascript">
+var vm = new Vue({
+  el : "#example",
+  data : { s1 : false, s2 : false, s3 : false }
+})
+</script>
+</body>
+</html>

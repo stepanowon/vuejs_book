@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>06-14~15</title>
+  <script src="https://unpkg.com/vue/dist/vue.min.js"></script>
+</head>
+<template id="listTemplate">
+    <li>{{message}}</li>
+</template>
+<script type="text/javascript">
+Vue.component('list-component', {
+    template : '#listTemplate',
+    props : {
+        message : { type:String, default:'안녕하세요' },
+        count : { type:Number, required:true }
+    } 
+})
+</script>
+<body>
+<div id="app">
+    <ul>
+        <list-component message="Hello" v-bind:count="100"></list-component>
+        <list-component message="씬짜오" :count="21"></list-component>
+        <list-component message="니하오마"></list-component>
+        <list-component v-bind:count="1000"></list-component>
+    </ul>
+</div>
+</body>
+<script type="text/javascript">
+Vue.config.devtools = true;
+var vm = new Vue({
+    el : "#app"
+})
+</script>
+</html>

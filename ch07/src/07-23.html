@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>07-23</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.3.3/vue.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/6.23.0/polyfill.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue-resource/1.3.1/vue-resource.min.js"></script>
+</head>
+<body>
+    <div id="res">
+        <button v-on:click="fetchData">데이터 가져오기</button>
+        <div>{{result}}</div>
+    </div>
+    <script>
+    let vm = new Vue({
+        el : '#res',
+        data : { result : '' },
+        methods : {
+            fetchData() {
+                let url = "http://sample.bmaster.kro.kr/contacts_long/search/ja";
+                this.$http.get(url)
+                    .then((response) => response.data)
+                    .then((json)=> this.result=json) 
+                    .catch((response)=>{
+                        console.log(response);
+                    })
+            }
+        }
+    })
+    </script>
+</body>
+</html>
