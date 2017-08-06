@@ -72,7 +72,6 @@ export default {
             })
         },
         fetchContactOne : function() {
-            var vm = this;
             this.$axios.get('/api/contacts/'+this.no)
             .then((response) => {
                 console.log(response);
