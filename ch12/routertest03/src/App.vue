@@ -32,12 +32,12 @@ import VueRouter from 'vue-router';
 const router = new VueRouter({
   //mode : 'history',
   routes : [
-    { path:'/',  component: Home },
-    { path:'/home', name:'home', component: Home },
-    { path:'/about', name:'about',component: About },
-    { path:'/contacts', name:'contacts', component: Contacts, 
+    { path:'/', component: Home },
+    { path:'/home', component: Home },
+    { path:'/about', component: About },
+    { path:'/contacts', component: Contacts, 
       children : [
-        { path : ':no', name:'contactbyno', component : ContactByNo },
+        { path : ':no', component : ContactByNo },
       ] 
     }
   ]
