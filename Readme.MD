@@ -3,7 +3,7 @@
 - 페이지: 520쪽
 - 발행일: 2017-09-05
 - 출판사: 루비페이퍼
-<img src="cover_vuejs_quickstart.png" style="width:100px; height:100px;" />
+<img src="cover_vuejs_quickstart.png" />
 
 ## 구입처
 - [yes24](http://www.yes24.com/24/goods/45091747?scode=032&OzSrank=3)
