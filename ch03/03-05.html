@@ -17,11 +17,13 @@ var vm = new Vue({
     data : { x:0, y:0, sum:0 },
     watch : {
         x : function(v) {
+            console.log('## x 변경')
             var result = Number(v) + Number(this.y);
             if (isNaN(result)) this.sum = 0;
             else this.sum = result;
         },
         y : function(v) {
+            console.log('## y 변경')
             this.y = v;
             var result = Number(this.x) + Number(v);
             if (isNaN(result)) this.sum = 0;
