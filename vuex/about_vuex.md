@@ -9,7 +9,7 @@
 3. **[게터(Getters)](#getters)**
 4. **[액션(Actions)](#actions)**
 5. **[대규모 애플리케이션의 저장소](#store_modules)**
-
+----------
 
 <a name="whyvuex" />
 
