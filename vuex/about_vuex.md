@@ -453,6 +453,31 @@ store 객체는 책 347페이지의 표에 나오는 속성을 가지고 있습�
 | state| 모듈 자기 자신의 상태 데이터입니다. |
 | rootState| 루트 저장소의 상태 데이터입니다. |
 
+
+**[구조 분해 할당을 사용하지 않았을 때 ]**
+```
+actions : {
+   [Constant.ADD_TODO] : (store, payload) => {
+       console.log("### addTodo!!!");
+       store.commit(Constant.ADD_TODO, payload);
+   },
+   ......
+}
+```
+
+
+**[구조 분해 할당을 사용했을 때 ]**
+```
+actions : {
+   [Constant.ADD_TODO] : ({ commit }, payload) => {
+       console.log("### addTodo!!!");
+       commit(Constant.ADD_TODO, payload);
+   },
+   ......
+}
+```
+
+
 <a name="store_modules" />
 
 ## 대규모 애플리케이션의 저장소(Store) 파일
