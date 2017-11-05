@@ -4,11 +4,11 @@
 * 이 컨텐츠는 제 책(Vue.js 퀵스타트)을 중심으로 설명합니다. 이 컨텐츠만 보셔서 내용을 이해하기에는 약간의 어려움이 있을수도 있습니다.
 
 ## 목차
-1. **[왜 Vuex를 사용하는가?](#vuex)**
-2. **[상태(state)와 변이(mutations)](#state_mutations)**
-3. **[게터(Getters)](#getters)**
-4. **[액션(Actions)](#actions)**
-5. **[대규모 애플리케이션의 저장소](#store_modules)**
+1. **[왜 Vuex를 사용하는가?](#왜 Vuex를 왜 사용하는가?)**
+2. **[상태(state)와 변이(mutations)](#상태(state)와 변이(mutations))**
+3. **[게터(Getters)](#게터(Getters))**
+4. **[액션(Actions)](#액션(Actions))**
+5. **[대규모 애플리케이션의 저장소](#대규모 애플리케이션의 저장소)**
 
 
 
