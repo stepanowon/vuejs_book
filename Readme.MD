@@ -184,6 +184,6 @@
   - B.1 프로젝트 생성과 초기화
 
 ---------------------------------------
-### 문의사항은 [Facebook vuejs 퀵스타트 그룹](https://www.facebook.com/groups/555721098107321/) 으로 연락주세요.
-
+### 문의사항은 [Facebook vuejs 퀵스타트 그룹](https://www.facebook.com/groups/555721098107321/)
+이메일로는 질문을 받지 않습니다. Facebook의 그룹에서 질문해주세요.
 
