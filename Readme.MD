@@ -29,7 +29,7 @@
 
 ### 2. Rest Operator를 이용해 Vuex 헬퍼메서드와 다른 메서드 함께 사용하기
 
-* babel-preset-env를 사용하면 319 페이지의 예제 11-06과 같이 Vuex 헬퍼메서드와 다른 메서드를 함께 사용하기 위해 lodash 라이브러리를 이용할 필요가 없습니다. ES6의 Rest Operator를 이용해 더 간단하게 표현할 수 있습니다. 예제 11-06의 20~30행까지의 코드는 다음과 같이 변경될 수 있습니다. 이와 같은 변경은 mapMutations뿐만 아니라 mapActions, mapGetters 등의 모든 헬퍼 메서드에 적용할 수 있습니다.
+* babel-preset-env를 사용하면 319 페이지의 예제 11-06과 같이 Vuex 헬퍼메서드와 다른 메서드를 함께 사용하기 위해 lodash 라이브러리를 이용하지 않고 ES6의 Rest Operator를 이용해 더 간단하게 표현할 수 있습니다. 예제 11-06의 20~30행까지의 코드는 다음과 같이 변경될 수 있습니다. 이와 같은 변경은 mapMutations뿐만 아니라 mapActions, mapGetters 등의 모든 헬퍼 메서드에 적용할 수 있습니다.
 
 **[ 기존코드 ]**
 ~~~
