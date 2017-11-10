@@ -24,8 +24,10 @@
 ## 버전 업그레이드 사항
 ### 1. babel-preset 관련 버전 
 * webpack에서 사용하던 babel-preset-es2015는 deprecated로 공지되었습니다. 이제는 babel-preset-env를 사용해야 합니다. env를 사용하면 ES2017+ 문법을 모두 사용할 수 있습니다. 코드에서 변경해야 할 부분은 [여기](http://babeljs.io/env#upgrading-to-babel-preset-env)를 참조하세요.
-
+* babel-preset 변경사항은 7장의 내용부터 적용할 수 있습니다.  
 * 최신 버전의 Vue-CLI를 이용하면 자연스럽게 babel-preset-env를 사용하게 됩니다. 
+
+### 2. Rest Operator를 이용해 Vuex 헬퍼메서드와 다른 메서드 함께 사용하기
 
 * babel-preset-env를 사용하면 319 페이지의 예제 11-06과 같이 Vuex 헬퍼메서드와 다른 메서드를 함께 사용하기 위해 lodash 라이브러리를 이용할 필요가 없습니다. ES6의 Rest Operator를 이용해 더 간단하게 표현할 수 있습니다. 예제 11-06의 20~30행까지의 코드는 다음과 같이 변경될 수 있습니다. 이와 같은 변경은 mapMutations뿐만 아니라 mapActions, mapGetters 등의 모든 헬퍼 메서드에 적용할 수 있습니다.
 
@@ -75,9 +77,7 @@ export default {
 </script>
 ~~~
 
-* babel-preset 변경사항은 7장의 내용부터 적용할 수 있습니다.  
-###  
-###  
+
   
 ## 목차
 - CHAPTER 01 시작하기
