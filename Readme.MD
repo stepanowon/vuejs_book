@@ -25,7 +25,7 @@
 ### 1. babel-preset 관련 버전 
 * webpack에서 사용하던 babel-preset-es2015는 최근에 deprecated로 공지되었습니다. 따라서 이제는 babel-preset-env를 사용해야 합니다. env를 사용하면 ES2017+ 문법을 모두 사용할 수 있습니다. 코드에서 변경해야 할 부분은 [여기](http://babeljs.io/env#upgrading-to-babel-preset-env)를 참조하세요.
 * babel-preset 변경사항은 7장의 내용부터 적용할 수 있습니다.  
-* 최신 버전의 Vue-CLI를 이용하면 자연스럽게 babel-preset-env를 사용하게 됩니다. 
+* 최신 버전의 Vue-CLI (2017-11-10 현재 2.9.1 버전)를 이용하면 자연스럽게 babel-preset-env를 사용하게 됩니다. 
 
 ### 2. Rest Operator를 이용해 Vuex 헬퍼메서드와 다른 메서드 함께 사용하기
 
