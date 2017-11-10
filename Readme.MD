@@ -76,8 +76,8 @@ export default {
 ~~~
 
 * babel-preset 변경사항은 7장의 내용부터 적용할 수 있습니다.  
-##  
-##  
+###  
+###  
   
 ## 목차
 - CHAPTER 01 시작하기
