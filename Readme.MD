@@ -10,9 +10,9 @@
 - [interpark](http://book.interpark.com/product/BookDisplay.do?_method=detail&sc.shopNo=0000400000&sc.prdNo=269077392&sc.saNo=003002001&bid1=search&bid2=product&bid3=title&bid4=001)
 
 ## 공지사항
-### 예제 파일을 압축파일로 받고 싶다면 [여기](https://github.com/stepanowon/vuejs_book/archive/master.zip)를 클릭하세요.
-### 오탈자는 [여기](오탈자.MD)를 확인합니다.
-### 입문자들의 이해를 돕기 위해 [Vuex에 대한 추가설명 문서](vuex/about_vuex.md)를 작성하였습니다.
+* 예제 파일을 압축파일로 받고 싶다면 [여기](https://github.com/stepanowon/vuejs_book/archive/master.zip)를 클릭하세요.
+* 오탈자는 [여기](오탈자.MD)를 확인합니다.
+* 입문자들의 이해를 돕기 위해 [Vuex에 대한 추가설명 문서](vuex/about_vuex.md)를 작성하였습니다.
 
 ## 예제파일
 * 각 장별로 예제를 분류하였습니다.
