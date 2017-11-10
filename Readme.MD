@@ -10,18 +10,25 @@
 - [interpark](http://book.interpark.com/product/BookDisplay.do?_method=detail&sc.shopNo=0000400000&sc.prdNo=269077392&sc.saNo=003002001&bid1=search&bid2=product&bid3=title&bid4=001)
 
 ## 공지사항
-#### 예제 파일을 압축파일로 받고 싶다면 [여기](https://github.com/stepanowon/vuejs_book/archive/master.zip)를 클릭하세요.
-#### 오탈자는 [여기](오탈자.MD)를 확인합니다.
-#### 입문자들의 이해를 돕기 위해 [Vuex에 대한 추가설명 문서](vuex/about_vuex.md)를 작성하였습니다.
+### 예제 파일을 압축파일로 받고 싶다면 [여기](https://github.com/stepanowon/vuejs_book/archive/master.zip)를 클릭하세요.
+### 오탈자는 [여기](오탈자.MD)를 확인합니다.
+### 입문자들의 이해를 돕기 위해 [Vuex에 대한 추가설명 문서](vuex/about_vuex.md)를 작성하였습니다.
+
+## 예제파일
+* 각 장별로 예제를 분류하였습니다.
+* 장별로 여러개의 프로젝트가 있는 경우는 장별로 Readme파일이 있습니다. 각 절마다 어떤 프로젝트를 사용하는지 명시되어 있습니다.
+* 이 책에서 사용하는 서비스 API 예제는 다음을 확인하세요.    
+   * API 다운로드 : https://github.com/stepanowon/contactsvc 
+   * API 사용법 : http://sample.bmaster.kro.kr
 
 ## 버전 업그레이드 사항
-
-#### 1. babel-preset 관련 버전 
+### 1. babel-preset 관련 버전 
 * webpack에서 사용하던 babel-preset-es2015는 deprecated로 공지되었습니다. 이제는 babel-preset-env를 사용해야 합니다. env를 사용하면 ES2017+ 문법을 모두 사용할 수 있습니다. 코드에서 변경해야 할 부분은 [여기](http://babeljs.io/env#upgrading-to-babel-preset-env)를 참조하세요.
 
 * 최신 버전의 Vue-CLI를 이용하면 자연스럽게 babel-preset-env를 사용하게 됩니다. 
 
 * babel-preset-env를 사용하면 319 페이지의 예제 11-06과 같이 Vuex 헬퍼메서드와 다른 메서드를 함께 사용하기 위해 lodash 라이브러리를 이용할 필요가 없습니다. ES6의 Rest Operator를 이용해 더 간단하게 표현할 수 있습니다. 예제 11-06의 20~30행까지의 코드는 다음과 같이 변경될 수 있습니다.
+
 **[ 기존코드 ]**
 ~~~
 <script type="text/javascript">
@@ -68,12 +75,7 @@ export default {
 </script>
 ~~~
 
-## 예제파일
-* 각 장별로 예제를 분류하였습니다.
-* 장별로 여러개의 프로젝트가 있는 경우는 장별로 Readme파일이 있습니다. 각 절마다 어떤 프로젝트를 사용하는지 명시되어 있습니다.
-* 이 책에서 사용하는 서비스 API 예제는 다음을 확인하세요.    
-   * API 다운로드 : https://github.com/stepanowon/contactsvc 
-   * API 사용법 : http://sample.bmaster.kro.kr
+* babel-preset 변경사항은 7장의 내용부터 적용할 수 있습니다.
 
 ## 목차
 - CHAPTER 01 시작하기
