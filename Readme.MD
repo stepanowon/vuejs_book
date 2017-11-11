@@ -77,8 +77,16 @@ export default {
 </script>
 ~~~
 
+### 3. async ~ await 적용 (338~339 페이지)
 
-  
+338~339 페이지에서 Promise 객체 대신에 async ~ await 을 적용한 코드를 볼 수 있습니다.
+이것을 사용하기 위해서 책에서는 npm install 명령어로 다음과 같이 패키지를 설치한다고 적었습니다.
+~~~
+npm install --save-dev babel-preset-stage-2 babel-plugin-transform-runtime
+~~~
+하지만 babel-preset-env를 사용한다면 위의 npm install 설치 과정 없이 바로 async ~ await 구문을 사용할 수 있습니다.
+
+  
 ## 목차
 - CHAPTER 01 시작하기
   - 1.1 Vue.js란?
