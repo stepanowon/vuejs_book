@@ -9,14 +9,14 @@
 - [yes24](http://www.yes24.com/24/goods/45091747?scode=032&OzSrank=3)
 - [interpark](http://book.interpark.com/product/BookDisplay.do?_method=detail&sc.shopNo=0000400000&sc.prdNo=269077392&sc.saNo=003002001&bid1=search&bid2=product&bid3=title&bid4=001)
 
-## 공지사항
-* 예제 파일을 압축파일로 받고 싶다면 [여기](https://github.com/stepanowon/vuejs_book/archive/master.zip)를 클릭하세요.
+## 오탈자, 공지사항
 * 오탈자는 [여기](오탈자.MD)를 확인합니다.
 * 입문자들의 이해를 돕기 위해 [Vuex에 대한 추가설명 문서](vuex/about_vuex.md)를 작성하였습니다.
 
 ## 예제파일
 * 각 장별로 예제를 분류하였습니다.
 * 장별로 여러개의 프로젝트가 있는 경우는 장별로 Readme파일이 있습니다. 각 절마다 어떤 프로젝트를 사용하는지 명시되어 있습니다.
+* 예제 파일을 압축파일로 받고 싶다면 [여기](https://github.com/stepanowon/vuejs_book/archive/master.zip)를 클릭하세요.
 * 이 책에서 사용하는 서비스 API 예제는 다음을 확인하세요.    
    * API 다운로드 : https://github.com/stepanowon/contactsvc 
    * API 사용법 : http://sample.bmaster.kro.kr
