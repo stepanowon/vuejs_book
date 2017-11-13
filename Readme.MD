@@ -86,6 +86,16 @@ npm install --save-dev babel-preset-stage-2 babel-plugin-transform-runtime
 ~~~
 하지만 babel-preset-env를 사용한다면 위의 npm install 설치 과정 없이 바로 async ~ await 구문을 사용할 수 있습니다.
 
+### 4. vue-cli에서 가장 많이 사용되는 webpack 템플릿의 내용이 변경되었습니다.
+- https://slack-files.com/T3RLXCU0N-F7ZTZAQ14-09884d82e9
+- https://github.com/vuejs-templates/webpack/releases/tag/1.2.0
+
+Vue.js Korea 박창주님의 게시물을 참조하였습니다.
+
+일단 변경된 내용에 의하면 autoOpenBrowser의 기본값이 true에서 false로 변경되었습니다. 이로 인해 npm run dev 명령어로 실행했을 때 브라우저가 자동으로 시작되지 않습니다. 자동으로 시작되도록 하려면 config/index.js 파일에서 autoOpenBrowser 옵션을 true로 변경하세요.
+
+나머지 자세한 내용은 박창주님의 게시물을 참조해주세요.
+
   
 ## 목차
 - CHAPTER 01 시작하기
