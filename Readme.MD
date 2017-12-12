@@ -97,6 +97,23 @@ Vue.js Korea 박창주님의 게시물을 참조하였습니다.
 
 나머지 자세한 내용은 박창주님의 게시물을 참조해주세요.
 
+### 5. Vue Devtools가 실행되지 않는 문제
+&lt;script&gt; 태그를 이용해 CDN 참조 방식으로 Vue.js 앱을 개발할 때 Vue.js 2.5.1버전까지는 production 버전의 vue.min.js를 참조하더라도 Vue.config.devtools = true; 코드를 추가하면 Vue Devtools를 사용할 수 있었습니다. 하지만 2.5.2버전부터는 development 버전의 vue.js를 참조해야만 Vue Devtools를 사용할 수 있도록 변경되었습니다.
+
+따라서 1~6장까지의 코드에서 Vue Devtools를 사용하시려면 CDN으로 참조하는 경로를 다음과 같이 바꿔주세요.
+
+**[변경전]**
+~~~
+<script src="https://unpkg.com/vue/dist/vue.min.js"></script>
+~~~
+
+**[변경후]**
+~~~
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+~~~
+
+
+
   
 ## 목차
 - CHAPTER 01 시작하기
