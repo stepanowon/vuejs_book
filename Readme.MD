@@ -112,6 +112,7 @@ Vue.js Korea 박창주님의 게시물을 참조하였습니다.
 <script src="https://unpkg.com/vue/dist/vue.js"></script>
 ~~~
 
+그리고 반드시 웹서버를 기반으로 실행해야 합니다. 따라서 live-server와 같은 로컬 웹서버 기반으로 실행해야 합니다. live-server를 설치하는 방법은 책124p에 설명되어 있습니다.
 
 
   
