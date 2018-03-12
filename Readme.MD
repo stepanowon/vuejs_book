@@ -123,6 +123,34 @@ Vue.js Korea 박창주님의 게시물을 참조하였습니다.
   - Vue.js Devtools를 찾아서  '파일 URL에 대한 액세스 허용'을 체크합니다.
   - View In Browser로 실행합니다.(CTRL + F1)
 
+### 6. webpack 버전 업그레이드
+webpack이 3.x에서 4.x 버전으로 업그레이드되면서 몇가지 변경된 부분이 있습니다. 그러므로 책의 예제중 8장의 예제에서 오류가 발생합니다.
+
+이 문제를 해결하기 위해서 webpack과 webpack-dev-server를 참조하기 위해 각각 3.11.0, 2.11.2 버전을 사용해야 합니다. 206페이지의 npm install 커맨드로 패키지를 참조하는 부분을 다음과 같이 변경합니다. 더불어서 babel-preset-es2015 대신에 babel-preset-env로 변경되었음은 앞에서 이미 말씀드린바 있습니다. 이것도 반영하는게 좋겠습니다.
+
+~~~
+npm install -g webpack@3.11.0
+
+npm install --save-dev webpack@3.11.0
+~~~
+
+~~~
+npm install --save-dev babel-cli babel-core babel-loader babel-preset-env
+~~~
+
+**[.babelrc 파일 ]**
+```
+{
+  "presets" : ["env"]
+}
+```
+211페이지 마지막 줄의 webpack-dev-server 참조시에도 버전을 명시적으로 지정해주세요. 
+
+npm install --save-dev webpack-dev-server@2.11.2
+
+
+
+
   
 ## 목차
 - CHAPTER 01 시작하기
