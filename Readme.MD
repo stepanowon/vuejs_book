@@ -13,7 +13,6 @@
 ## 오탈자, 공지사항
 * 오탈자는 [여기](오탈자.MD)를 확인합니다.
 * 입문자들의 이해를 돕기 위해 [Vuex에 대한 추가설명 문서](vuex/about_vuex.md)를 작성하였습니다.
-* 이 책의 강의용 PDF 파일이 제공됩니다. [여기](https://github.com/stepanowon/vuejs_book_ppt/archive/master.zip)를 클릭하여 다운로드하세요.
 
 ## 예제파일
 * 각 장별로 예제를 분류하였습니다.
