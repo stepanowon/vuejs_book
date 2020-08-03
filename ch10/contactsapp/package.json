@@ -10,7 +10,7 @@
     "build": "node build/build.js"
   },
   "dependencies": {
-    "axios": "^0.16.2",
+    "axios": "^0.19.2",
     "es6-promise": "^4.1.0",
     "vue": "^2.3.3",
     "vuejs-paginate": "^0.9.1"
