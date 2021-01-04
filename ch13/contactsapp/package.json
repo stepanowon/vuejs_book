@@ -10,7 +10,7 @@
     "build": "node build/build.js"
   },
   "dependencies": {
-    "axios": "^0.16.2",
+    "axios": "^0.21.1",
     "es6-promise": "^4.1.0",
     "lodash": "^4.17.4",
     "velocity-animate": "^1.5.0",
